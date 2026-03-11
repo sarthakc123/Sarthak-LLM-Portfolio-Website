@@ -20,10 +20,10 @@ export function Hero() {
       <ParticleCanvas />
 
       {/* Two-column layout */}
-      <div className="relative z-10 flex min-h-[calc(100vh-64px)] flex-col lg:flex-row">
+      <div className="relative z-10 flex min-h-[calc(100vh-64px)] flex-col lg:flex-row lg:items-start">
 
         {/* ── LEFT SIDEBAR ── */}
-        <div className="lg:w-[300px] lg:shrink-0 lg:sticky lg:top-16 lg:h-[calc(100vh-64px)] lg:overflow-y-auto flex flex-col border-b border-[#e8eaed] bg-[#f8f9fa] lg:border-b-0 lg:border-r">
+        <div className="lg:w-[300px] lg:shrink-0 lg:self-start lg:sticky lg:top-16 lg:max-h-[calc(100vh-64px)] lg:overflow-y-auto flex flex-col border-b border-[#e8eaed] bg-[#f8f9fa] lg:border-b-0 lg:border-r lg:z-0">
 
           {/* Google-colored accent bar at top */}
           <div className="h-1 w-full flex-none">
@@ -169,7 +169,7 @@ export function Hero() {
         </div>
 
         {/* ── RIGHT: CHAT ── */}
-        <div className="flex flex-1 flex-col gap-4 p-5 lg:p-8 bg-white">
+        <div className="flex flex-1 min-w-0 flex-col gap-4 p-5 lg:p-8 bg-white relative z-0">
 
           {/* Mini heading above chat */}
           <div className="hidden lg:block">
