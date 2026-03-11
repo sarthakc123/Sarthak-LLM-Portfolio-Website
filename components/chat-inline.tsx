@@ -31,7 +31,7 @@ export function ChatInline() {
   const [autoPlay, setAutoPlay] = useState(false)
   const [isListening, setIsListening] = useState(false)
   const [speakingMsgId, setSpeakingMsgId] = useState<string | null>(null)
-  const endRef = useRef<HTMLDivElement>(null)
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const prevStatusRef = useRef<string>("")
 
@@ -47,7 +47,8 @@ export function ChatInline() {
   const isLoading = status === "submitted" || status === "streaming"
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: "smooth" })
+    const el = scrollContainerRef.current
+    if (el) el.scrollTop = el.scrollHeight
   }, [messages])
 
   /* ── TTS ── */
@@ -182,7 +183,7 @@ export function ChatInline() {
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto px-5 py-5 [scrollbar-width:thin] [scrollbar-color:#dadce0_transparent]">
+      <div ref={scrollContainerRef} className="flex-1 overflow-y-auto px-5 py-5 [scrollbar-width:thin] [scrollbar-color:#dadce0_transparent]">
         <div className="flex flex-col gap-5">
           {messages.map((msg) => {
             const textPart = msg.parts.find((p) => p.type === "text")
@@ -245,7 +246,6 @@ export function ChatInline() {
             </div>
           )}
 
-          <div ref={endRef} />
         </div>
       </div>
 
