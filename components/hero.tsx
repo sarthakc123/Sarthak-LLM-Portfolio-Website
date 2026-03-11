@@ -20,10 +20,10 @@ export function Hero() {
       <ParticleCanvas />
 
       {/* Two-column layout — side by side from 640px up */}
-      <div className="relative z-10 flex min-h-[calc(100vh-64px)] flex-col sm:flex-row sm:items-start">
+      <div className="relative z-10 hero-layout">
 
         {/* ── LEFT SIDEBAR ── */}
-        <div className="sm:w-[260px] sm:shrink-0 sm:self-start sm:sticky sm:top-16 sm:max-h-[calc(100vh-64px)] sm:overflow-y-auto flex flex-col border-b border-[#e8eaed] bg-[#f8f9fa] sm:border-b-0 sm:border-r overflow-hidden">
+        <div className="hero-sidebar">
 
           {/* Google-colored accent bar at top */}
           <div className="h-1 w-full flex-none">
@@ -31,7 +31,7 @@ export function Hero() {
           </div>
 
           {/* ── Mobile layout (horizontal, <640px only) ── */}
-          <div className="flex items-center gap-4 px-5 py-5 sm:hidden">
+          <div className="sidebar-mobile-only items-center gap-4 px-5 py-5">
             <div className="relative shrink-0">
               <div className="absolute -inset-0.5 rounded-full bg-gradient-to-br from-[#4285F4] to-[#34A853]" />
               <div className="relative h-14 w-14 overflow-hidden rounded-full">
@@ -57,7 +57,7 @@ export function Hero() {
           </div>
 
           {/* ── Sidebar layout (vertical, sm+) ── */}
-          <div className="max-sm:hidden flex flex-1 flex-col items-center gap-6 px-8 py-10">
+          <div className="sidebar-desktop-only flex-1 flex-col items-center gap-6 px-8 py-10">
 
             {/* Photo with glow ring */}
             <div className="relative mt-4">

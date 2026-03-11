@@ -145,3 +145,57 @@ body {
 .section-alt {
   background-color: #f8f9fa;
 }
+
+/* ── Hero two-column layout (bypasses Tailwind purge) ── */
+.hero-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px);
+}
+@media (min-width: 640px) {
+  .hero-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.hero-sidebar {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-bottom: 1px solid #e8eaed;
+  background-color: #f8f9fa;
+}
+@media (min-width: 640px) {
+  .hero-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    align-self: flex-start;
+    position: sticky;
+    top: 64px;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    border-bottom: none;
+    border-right: 1px solid #e8eaed;
+  }
+}
+
+/* Show only on mobile (<640px) */
+.sidebar-mobile-only {
+  display: flex;
+}
+@media (min-width: 640px) {
+  .sidebar-mobile-only {
+    display: none;
+  }
+}
+
+/* Show only on sm+ (>=640px) */
+.sidebar-desktop-only {
+  display: none;
+}
+@media (min-width: 640px) {
+  .sidebar-desktop-only {
+    display: flex;
+  }
+}
