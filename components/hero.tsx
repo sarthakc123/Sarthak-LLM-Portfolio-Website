@@ -19,19 +19,19 @@ export function Hero() {
       {/* Subtle particle layer */}
       <ParticleCanvas />
 
-      {/* Two-column layout */}
-      <div className="relative z-10 flex min-h-[calc(100vh-64px)] flex-col lg:flex-row lg:items-start">
+      {/* Two-column layout — side by side from 640px up */}
+      <div className="relative z-10 flex min-h-[calc(100vh-64px)] flex-col sm:flex-row sm:items-start">
 
         {/* ── LEFT SIDEBAR ── */}
-        <div className="lg:w-[300px] lg:shrink-0 lg:self-start lg:sticky lg:top-16 lg:max-h-[calc(100vh-64px)] lg:overflow-y-auto flex flex-col border-b border-[#e8eaed] bg-[#f8f9fa] lg:border-b-0 lg:border-r lg:z-0">
+        <div className="sm:w-[260px] sm:shrink-0 sm:self-start sm:sticky sm:top-16 sm:max-h-[calc(100vh-64px)] sm:overflow-y-auto flex flex-col border-b border-[#e8eaed] bg-[#f8f9fa] sm:border-b-0 sm:border-r overflow-hidden">
 
           {/* Google-colored accent bar at top */}
           <div className="h-1 w-full flex-none">
             <div className="h-full w-full bg-gradient-to-r from-[#4285F4] via-[#34A853] to-[#FBBC05]" />
           </div>
 
-          {/* ── Mobile layout (horizontal) ── */}
-          <div className="flex items-center gap-4 px-5 py-5 lg:hidden">
+          {/* ── Mobile layout (horizontal, <640px only) ── */}
+          <div className="flex items-center gap-4 px-5 py-5 sm:hidden">
             <div className="relative shrink-0">
               <div className="absolute -inset-0.5 rounded-full bg-gradient-to-br from-[#4285F4] to-[#34A853]" />
               <div className="relative h-14 w-14 overflow-hidden rounded-full">
@@ -56,8 +56,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* ── Desktop layout (vertical) ── */}
-          <div className="max-lg:hidden flex flex-1 flex-col items-center gap-6 px-8 py-10">
+          {/* ── Sidebar layout (vertical, sm+) ── */}
+          <div className="max-sm:hidden flex flex-1 flex-col items-center gap-6 px-8 py-10">
 
             {/* Photo with glow ring */}
             <div className="relative mt-4">
@@ -169,10 +169,10 @@ export function Hero() {
         </div>
 
         {/* ── RIGHT: CHAT ── */}
-        <div className="flex flex-1 min-w-0 flex-col gap-4 p-5 lg:p-8 bg-white relative z-0">
+        <div className="flex flex-1 min-w-0 flex-col gap-4 p-5 sm:p-8 bg-white relative z-0">
 
           {/* Mini heading above chat */}
-          <div className="hidden lg:block">
+          <div className="hidden sm:block">
             <p className="text-xs font-semibold uppercase tracking-widest text-[#80868b]">
               Meet Sarthak, powered by AI
             </p>

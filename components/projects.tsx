@@ -161,14 +161,14 @@ export function Projects() {
           <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-[#80868b]">
             The Journey
           </p>
-          <div className="flex flex-col gap-0 sm:flex-row sm:items-start sm:gap-0">
+          <div className="flex flex-row items-start gap-0">
             {JOURNEY.map((step, i) => (
-              <div key={step.year} className="relative flex sm:flex-1">
+              <div key={step.year} className="relative flex flex-1">
                 {/* Connector line */}
                 {i < JOURNEY.length - 1 && (
-                  <div className="absolute left-[18px] top-9 h-[calc(100%-36px)] w-0.5 bg-[#e8eaed] sm:left-auto sm:top-[18px] sm:h-0.5 sm:w-full sm:translate-x-9" />
+                  <div className="absolute left-auto top-[18px] h-0.5 w-full translate-x-9 bg-[#e8eaed]" />
                 )}
-                <div className="flex gap-3 pb-6 sm:flex-col sm:items-center sm:gap-2 sm:pb-0 sm:pr-4">
+                <div className="flex flex-col items-center gap-2 pb-0 pr-4">
                   {/* Node */}
                   <div
                     className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-white text-[10px] font-bold shadow-sm"
@@ -176,7 +176,7 @@ export function Projects() {
                   >
                     {i + 1}
                   </div>
-                  <div className="sm:text-center">
+                  <div className="text-center">
                     <p className="text-xs font-bold text-[#202124]">{step.label}</p>
                     <p className="text-xs text-[#80868b]">{step.year}</p>
                     <p className="mt-0.5 text-xs text-[#5f6368]">{step.detail}</p>
