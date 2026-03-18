@@ -131,6 +131,7 @@ export function ChatInline() {
   const handleSend = (text?: string) => {
     const content = text ?? inputValue.trim()
     if (!content || isLoading) return
+    stopSpeaking()
     setInputValue("")
     sendMessage({ text: content })
   }
