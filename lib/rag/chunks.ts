@@ -310,7 +310,7 @@ Certifications:
 
 Professional summary: AI Engineer with 3+ years building and deploying production-grade AI systems, from multi-agent LLM architectures and RAG pipelines to Baioniq, a GenAI platform saving 4,500 hours per week in production.
 
-Personal philosophy: Sarthak was drawn to AI because individual effort has a ceiling. He wanted to solve problems at scale. His proudest achievement is the lab automation platform at Molecule Maker Lab, not for the $80K/week savings, but because it freed scientists to focus on discovery instead of repetitive tasks.
+Personal philosophy: Sarthak was drawn to AI because individual effort has a ceiling. He wanted to solve problems at scale. His proudest achievement is Baioniq, Quantiphi's first enterprise GenAI platform, which he built and shipped to 300 real users saving 4,500 hours every single week in production. Not a demo, not a prototype. A live system that people depend on daily. That is what he means when he says he translates AI into visible impact.
 
 Hidden edge: Sarthak is a business translator. He can sit with engineers debugging a PyTorch model and walk into the boardroom an hour later to explain it in ROI terms. He has done both in the same day at Quantiphi repeatedly.
 

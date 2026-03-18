@@ -10,13 +10,17 @@ import { Skills } from "@/components/skills"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { Chat } from "@/components/chat"
+import { IntroAnimation } from "@/components/intro-animation"
 
 export default function Home() {
-  // Mobile-only floating chat state
   const [chatOpen, setChatOpen] = useState(false)
+  const [introComplete, setIntroComplete] = useState(false)
 
   return (
     <>
+      {!introComplete && (
+        <IntroAnimation onComplete={() => setIntroComplete(true)} />
+      )}
       <Navbar />
       <main>
         <Hero />
